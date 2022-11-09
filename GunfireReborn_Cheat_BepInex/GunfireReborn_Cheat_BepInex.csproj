@@ -1,0 +1,517 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>GunfireReborn_Cheat_BepInex</AssemblyName>
+    <Description>GunfireReborn_Cheat_BepInex</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>AnyCPU;x64</Platforms>
+    <BaseOutputPath>E:\源码\GunfireReborn_Cheat_BepInex\GunfireReborn_Cheat_BepInex\GunfireReborn_Cheat_BepInex\bin</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.Core">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\BepInEx.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.IL2CPP">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\BepInEx.IL2CPP.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.Preloader.Core">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\BepInEx.Preloader.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Bolt.Core.Runtime">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Bolt.Core.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\BouncyCastle.Crypto.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Coffee.UIParticle">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Coffee.UIParticle.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Cpp2IL.Core">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\Cpp2IL.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="csharpdata">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\csharpdata.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\DOTween.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\DOTweenPro.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Gee.External.Capstone">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\Gee.External.Capstone.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Iced">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\Iced.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2Cpp.TlsAdapter">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\Il2Cpp.TlsAdapter.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppDumper">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\Il2CppDumper.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppI18N">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppI18N.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppI18N.CJK">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppI18N.CJK.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppMono.Security">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppMono.Security.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2Cppmscorlib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Configuration">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppSystem.Configuration.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Core">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppSystem.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Data">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppSystem.Data.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Diagnostics.StackTrace">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppSystem.Diagnostics.StackTrace.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Globalization.Extensions">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppSystem.Globalization.Extensions.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.IO.Compression">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppSystem.IO.Compression.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Numerics">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppSystem.Numerics.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Runtime.Serialization">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Text.Encoding.CodePages">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppSystem.Text.Encoding.CodePages.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Il2CppSystem.Xml.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="IndexRange">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\IndexRange.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="LibAssemblyUnhollower">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\LibAssemblyUnhollower.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="LibCpp2IL">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\LibCpp2IL.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Ludiq.Core.Runtime">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Ludiq.Core.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Ludiq.Graphs.Runtime">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Ludiq.Graphs.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MailKit">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\MailKit.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MimeKit">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\MimeKit.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\Mono.Cecil.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\Mono.Cecil.Mdb.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\Mono.Cecil.Pdb.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\Mono.Cecil.Rocks.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\MonoMod.RuntimeDetour.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\MonoMod.Utils.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Newtonsoft.Json.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ProBuilderCore-Unity5">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\ProBuilderCore-Unity5.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ProBuilderMeshOps-Unity5">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\ProBuilderMeshOps-Unity5.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SemanticVersioning">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\SemanticVersioning.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Sirenix.OdinInspector.Attributes">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Sirenix.OdinInspector.Attributes.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Sirenix.Serialization.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Sirenix.Serialization.AOTGenerated">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Sirenix.Serialization.AOTGenerated.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Sirenix.Serialization.Config">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Sirenix.Serialization.Config.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Sirenix.Utilities">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Sirenix.Utilities.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnhollowerBaseLib">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\UnhollowerBaseLib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnhollowerRuntimeLib">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\UnhollowerRuntimeLib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Unity.Postprocessing.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Lightweight.Runtime">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Unity.RenderPipelines.Lightweight.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\Unity.TextMeshPro.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.AccessibilityModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.AIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.ARModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.AudioModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.BaselibModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.BaselibModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.ClothModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.ClusterInputModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.ClusterRendererModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.CrashReportingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.DirectorModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.FileSystemHttpModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.FileSystemHttpModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.GameCenterModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.GridModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.HotReloadModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.InputModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.LocalizationModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.Networking.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.ProfilerModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.StreamingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.StyleSheetsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.SubstanceModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.TerrainModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.TextCoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.TilemapModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.Timeline.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TimelineModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.TimelineModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.TLSModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UmbraModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UNETModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UnityConnectModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.VehiclesModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.VFXModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.VideoModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.VRModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.WindModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\unhollowed\UnityEngine.XRModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="WasmDisassembler">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Gunfire Reborn\BepInEx\core\WasmDisassembler.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
