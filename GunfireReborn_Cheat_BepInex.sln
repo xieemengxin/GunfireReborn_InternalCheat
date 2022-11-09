@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GunfireReborn_Cheat_BepInex", "GunfireReborn_Cheat_BepInex\GunfireReborn_Cheat_BepInex.csproj", "{BA07ABBB-D518-476A-AE19-FCC3C0CCFE44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA07ABBB-D518-476A-AE19-FCC3C0CCFE44}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{BA07ABBB-D518-476A-AE19-FCC3C0CCFE44}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{BA07ABBB-D518-476A-AE19-FCC3C0CCFE44}.Debug|x64.ActiveCfg = Debug|x64
+		{BA07ABBB-D518-476A-AE19-FCC3C0CCFE44}.Debug|x64.Build.0 = Debug|x64
+		{BA07ABBB-D518-476A-AE19-FCC3C0CCFE44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA07ABBB-D518-476A-AE19-FCC3C0CCFE44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA07ABBB-D518-476A-AE19-FCC3C0CCFE44}.Release|x64.ActiveCfg = Release|x64
+		{BA07ABBB-D518-476A-AE19-FCC3C0CCFE44}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {336327B6-812B-4E74-847D-E44E357E2B72}
+	EndGlobalSection
+EndGlobal
